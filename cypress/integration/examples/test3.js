@@ -2,7 +2,7 @@
 
 describe('My third test suite', function () {
     it('search the product perform certain operation', function() {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+        cy.visit(Cypress.env('url')+'/AutomationPractice/');
 
         // Checkbox
         cy.get('#checkBoxOption1').check().should('be.checked').and('have.value', 'option1');

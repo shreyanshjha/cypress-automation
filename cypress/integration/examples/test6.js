@@ -1,8 +1,8 @@
 // <reference types='Cypress' />
 
-describe('Table test suit', () => {
-    it('First test case for table', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+describe('Table test suit', function() {
+    it('First test case for table', function(){
+        cy.visit(Cypress.env('url')+'/AutomationPractice/');
         cy.get('table#product > tbody tr td:nth-child(2)').each((el, index) => {
             const text = el.text();
             if(text.includes('Python')) {

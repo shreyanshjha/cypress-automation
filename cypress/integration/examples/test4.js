@@ -2,7 +2,7 @@
 
 describe('My third test suite', function () {
     it('search the product perform certain operation', function() {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+        cy.visit(Cypress.env('url')+'/AutomationPractice/');
 
         cy.get('#alertbtn').click();
         cy.get('#confirmbtn[value="Confirm"]').click();
