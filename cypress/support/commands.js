@@ -24,9 +24,19 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-// Cypress.Commands.add('submitFormDetails', () => {
-//     cy.get('#country').type('India');
-//     cy.wait(2000);
-//     cy.get('.suggestions ul li a').click();
-//     cy.get('input[value="Purchase"]').click();
-// });
+Cypress.Commands.add('submitFormDetails', () => {
+    cy.get('#country').type('India');
+    cy.wait(2000);
+    cy.get('.suggestions ul li a').click();
+    cy.get('input[value="Purchase"]').click();
+});
+Cypress.Commands.add('LoginAPI', () => {
+    cy.request('POST', '\n' + 'https://rahulshettyacademy.com/api/ecom/auth/login',
+        {
+            "userEmail":"shreyanshjha22@gmail.com",
+            "userPassword":"Test123#"
+        }).then(function(res) {
+            expect(res.status).to.equal(200);
+            Cypress.env('token',res.body.token);
+    })
+})

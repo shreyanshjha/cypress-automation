@@ -16,11 +16,14 @@
     "cypress": "^13.17.0",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",
-    "multiple-cucumber-html-reporter": "^3.8.0"
+    "multiple-cucumber-html-reporter": "^3.8.0",
+    "neat-csv": "5.1.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
-    "@cypress/browserify-preprocessor": "latest"
+    "@cypress/browserify-preprocessor": "latest",
+    "convert-excel-to-json": "^1.7.0",
+    "exceljs": "^4.4.0"
   },
   "cypress-cucumber-preprocessor": {
     "json": {
